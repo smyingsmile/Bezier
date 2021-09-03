@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bezier</title>
+        <style media="screen">
+            canvas {
+                border: 1px black solid;
+            }
+        </style>
+        <script src='bezier.js'></script>
+        <script src='game.js'></script>
+        <script src='point.js'></script>
+    </head>
+    <body>
+        <canvas id="id-canvas" width="400" height="300"></canvas>
+        <script>
+        var log = console.log.bind(console)
+
+        var __main = function() {
+            let points = [
+                    { x: 20, y: 200 },
+                    { x: 50, y: 250 },
+                    { x: 300, y: 250 },
+                    { x: 300, y: 50 },
+            ]
+            let game = Game.instance(30, points, function(g){
+                g.runloop()
+            })
+        }
+
+        __main()
+        </script>
+    </body>
+</html>

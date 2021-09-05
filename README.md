@@ -19,6 +19,8 @@
 
 **如何开始？**
 
+[在线Demo](https://codepen.io/smyingsmile/project/editor/XWzGzy)
+
 
 可以先在浏览器中运行 gameTiny.html;
 

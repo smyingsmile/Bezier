@@ -140,10 +140,8 @@ class Game {
             this.drawLine(current, next)
         }
 
-        // log('this.drawList.length', this.drawList.length)
         for (let i = 0; i < this.drawList.length; i++) {
             let p = this.drawList[i]
-            // log('p in draw', p)
             p = Point.new(this, p.x, p.y, 5,'pink')
             p.draw()
         }
@@ -156,7 +154,10 @@ class Game {
             this.ds.push(d)
         }
 
-        this.ball.draw()
+        // 当画布中出现曲线时 小球再出现并运动
+        if (this.drawList.length > 0) {
+            this.ball.draw()
+        }
     }
     runloop() {
         // log(window.fps)
